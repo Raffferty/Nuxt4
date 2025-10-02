@@ -1,0 +1,1 @@
+import{_ as s,d as t,i as n,g as r,S as a}from"#entry";const l={},c={class:"error-layout"};function d(o,e){return n(),t("div",c,[e[0]||(e[0]=r("h3",null,"Error Layout",-1)),r("main",null,[a(o.$slots,"default")])])}const u=s(l,[["render",d]]);export{u as default};
