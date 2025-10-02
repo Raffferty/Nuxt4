@@ -3,3 +3,5 @@ node_modules
 dist
 .output
 .nuxt
+
+github.workflows.studio-copy.yml
