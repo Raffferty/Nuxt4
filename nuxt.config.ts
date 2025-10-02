@@ -21,6 +21,19 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [eslint({ include: ['**/*.{ts,vue}'], exclude: ['node_modules', '.nuxt'] })],
+
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/scss/variables.scss" as *;',
+          // silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import'],
+        },
+      },
+    },
+
+    esbuild: {
+      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [], // suppress console logs on production
+    },
   },
 
   typescript: {
@@ -37,5 +50,5 @@ export default defineNuxtConfig({
     // typeCheck: true, // type-checking at build or development time
   },
 
-  css: ['@/assets/main.scss'],
+  css: ['@/assets/scss/main.scss'],
 })
